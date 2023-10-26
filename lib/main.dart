@@ -58,7 +58,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class WeatherScreen extends StatefulWidget {
   @override
   _WeatherScreenState createState() => _WeatherScreenState();
@@ -199,6 +198,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 _buildIconWithText(weatherData.uvIcon, 'UV'),
               ],
             ),
+            SizedBox(height: 10),
+            Text(
+              'Last Updated: ${weatherData.lastUpdated}',
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+            ),
           ],
         ),
       ),
@@ -288,6 +292,11 @@ class WeatherScreen2 extends StatelessWidget {
                 _buildIconWithText(weatherData.windIcon, 'Wind'),
                 _buildIconWithText(weatherData.uvIcon, 'UV'),
               ],
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Last Updated: ${weatherData.lastUpdated}',
+              style: TextStyle(fontSize: 16, color: Colors.grey),
             ),
           ],
         ),
